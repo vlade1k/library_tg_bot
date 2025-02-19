@@ -5,6 +5,14 @@ plugins {
 group = 'ru.vlade1k'
 version = '1.0-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+compileJava.options.encoding = compileTestJava.options.encoding = "UTF-8"
+
 repositories {
     mavenCentral()
 }
@@ -12,7 +20,10 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
     implementation group: 'org.telegram', name: 'telegrambots-longpolling', version: '8.2.0'
+    implementation 'org.telegram:telegrambots-client:8.0.0'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.12.1'
 }
 
 test {
