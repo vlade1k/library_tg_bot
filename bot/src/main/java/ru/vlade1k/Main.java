@@ -21,7 +21,7 @@ public class Main {
     } catch (ReadConfigException e) {
       log.error("Failed to read config.", e);
     } catch (EmptyMessageException e) {
-      log.error("Failed to anwser on a message.");
+      log.error("Failed to reply to the message.");
     } catch (Exception e) {
       log.error("Fatal Error.");
     }

@@ -3,9 +3,9 @@ package ru.vlade1k.data;
 import java.util.Objects;
 
 public class UserData {
-  private final String name;
-  private final String surname;
-  private final String secondName;
+  private String name;
+  private String surname;
+  private String secondName;
 
   private int course;
 
@@ -22,6 +22,28 @@ public class UserData {
   public static UserData createUserFromMessage(String message) {
     String[] data = message.split(" ");
     return new UserData(data[0], data[1], data[2]);
+  }
+
+  public void changeUserData(UserData updatedUserData) {
+    this.name = updatedUserData.getName();
+    this.surname = updatedUserData.getSurname();
+    this.secondName = updatedUserData.getSecondName();
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getSurname() {
+    return surname;
+  }
+
+  public String getSecondName() {
+    return secondName;
+  }
+
+  public int getCourse() {
+    return course;
   }
 
   @Override
