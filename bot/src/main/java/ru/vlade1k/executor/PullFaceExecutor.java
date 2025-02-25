@@ -5,7 +5,7 @@ import org.telegram.telegrambots.meta.api.objects.message.Message;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.generics.TelegramClient;
 import ru.vlade1k.data.IStorage;
-import ru.vlade1k.dialog.State;
+import ru.vlade1k.dialog.StateInitializer.State;
 
 public class PullFaceExecutor extends MessageExecutor {
 

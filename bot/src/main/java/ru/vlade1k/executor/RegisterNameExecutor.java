@@ -6,7 +6,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.generics.TelegramClient;
 import ru.vlade1k.data.IStorage;
 import ru.vlade1k.data.UserData;
-import ru.vlade1k.dialog.State;
+import ru.vlade1k.dialog.StateInitializer.State;
 import ru.vlade1k.util.DataUtil;
 
 public class RegisterNameExecutor extends MessageExecutor {
